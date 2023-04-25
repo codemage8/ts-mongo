@@ -1,6 +1,6 @@
 {
-  "name": "@tianhuil/ts-mongo",
-  "version": "1.1.0",
+  "name": "@devjin8/ts-mongo",
+  "version": "1.1.2",
   "description": "",
   "scripts": {
     "assert": ". ./assert.sh",
@@ -12,12 +12,12 @@
     "prettier:fix": "prettier src --write",
     "clean": "rm -rf ./lib",
     "build": "npm run clean clean && npm run build:esm && npm run build:cjs",
-    "build:esm": "tsc -p ./pkg-tsconfig/tsconfig.esm.json && mv lib/esm/index.js lib/esm/index.mjs",
+    "build:esm": "tsc -p ./pkg-tsconfig/tsconfig.esm.json",
     "build:cjs": "tsc -p ./pkg-tsconfig/tsconfig.cjs.json",
     "prepack": "npm run prettier && npm run lint && npm run typecheck && npm run assert && npm run jest && npm run build"
   },
   "keywords": [],
-  "author": "Tianhui Michael Li",
+  "author": "ZiLin Jin",
   "license": "ISC",
   "devDependencies": {
     "@shelf/jest-mongodb": "^4.1.0",
